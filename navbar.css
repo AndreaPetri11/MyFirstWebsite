@@ -1,0 +1,33 @@
+/* NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    z-index: 100;
+}
+
+header h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: yellow;
+    letter-spacing: 2px;
+    font-size: 70px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 32px;
+    transition: color 0.3s ease;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: yellow;
+    font-weight: 1000;
+    font-size: 150%;
+}

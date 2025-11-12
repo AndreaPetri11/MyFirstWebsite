@@ -1,0 +1,153 @@
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+    .hero {
+        align-items: center;
+        text-align: center;
+        background-position: center;
+        padding: 32px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 500px;
+        align-items: center;
+        text-align: center;
+        background-position: center;
+        padding: 24px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .hero a {
+        padding: 11px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: auto;
+        padding: 32px 16px;
+        text-align: center;
+        align-items: center;
+        background-position: center;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 13px;
+        margin-bottom: 24px;
+    }
+
+    .hero a {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* --- LAYOUT MOBILE: NAV SOTTO IL FOOTER --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Nascondi la nav originale */
+    header nav {
+        display: none;
+    }
+
+    /* Spazio extra per la nav fissa */
+    body::after {
+        content: "";
+        display: block;
+        height: 60px;
+    }
+
+    /* NAV MOBILE SEMPRE VISIBILE E CENTRATA */
+    .mobile-nav {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 600px;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 13px 0;
+        border-top: 2px solid yellow;
+        z-index: 999;
+        box-shadow: 0 -2px 15px rgba(255, 255, 0, 0.25);
+        border-radius: 16px 16px 0 0;
+    }
+
+    /* Link nella nav mobile */
+    .mobile-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        transition: color 0.3s, transform 0.2s;
+    }
+
+    .mobile-nav a:hover {
+        color: yellow;
+        transform: scale(1.1);
+    }
+
+    /* Mantieni un piccolo spazio sotto il contenuto per la nav */
+    body::after {
+        content: "";
+        display: block;
+        height: 80px;
+    }
+
+    /* Adattamento per schermi piccoli */
+    @media (max-width: 480px) {
+        .mobile-nav {
+            max-width: 90%;
+            padding: 10px 0;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .mobile-nav a {
+            font-size: 14px;
+        }
+    }
+
+    /* Struttura verticale */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    section {
+        flex: 1;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+}
