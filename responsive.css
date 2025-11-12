@@ -64,6 +64,26 @@
     }
 }
 
+/* NAV MOBILE SEMPRE VISIBILE E CENTRATA */
+.mobile-nav {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 0;
+    border-top: 2px solid yellow;
+    z-index: 999;
+    box-shadow: 0 -2px 15px rgba(255, 255, 0, 0.25);
+    border-radius: 16px 16px 0 0;
+}
+
 /* --- LAYOUT MOBILE: NAV SOTTO IL FOOTER --- */
 @media (max-width: 768px) {
     header {
@@ -83,24 +103,8 @@
         height: 60px;
     }
 
-    /* NAV MOBILE SEMPRE VISIBILE E CENTRATA */
     .mobile-nav {
-        position: fixed;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 600px;
-        background-color: black;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 13px 0;
-        border-top: 2px solid yellow;
-        z-index: 999;
-        box-shadow: 0 -2px 15px rgba(255, 255, 0, 0.25);
-        border-radius: 16px 16px 0 0;
-    }
+            visibility:visible;}
 
     /* Link nella nav mobile */
     .mobile-nav a {
