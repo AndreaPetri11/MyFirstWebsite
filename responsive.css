@@ -1,4 +1,5 @@
 /* --- RESPONSIVE DESIGN --- */
+
 @media (max-width: 1024px) {
     .hero {
         align-items: center;
@@ -85,28 +86,43 @@
 }
 
 /* --- LAYOUT MOBILE: NAV SOTTO IL FOOTER --- */
-@media (max-width: 768px) {
+@media (max-width: 1195px) {
     header {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Nascondi la nav originale */
+    /* Nascondi solo i link del menu, NON la barra di ricerca */
     header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* Mostra solo la barra di ricerca */
+    header nav form {
+        display: flex;
+        margin-top: 12px;
+    }
+
+    /* Nascondi i link del menu principale */
+    header nav a {
         display: none;
+    }
+
+    /* NAV MOBILE visibile */
+    .mobile-nav {
+        visibility: visible;
     }
 
     /* Spazio extra per la nav fissa */
     body::after {
         content: "";
         display: block;
-        height: 60px;
+        height: 80px;
     }
 
-    .mobile-nav {
-            visibility:visible;}
-
-    /* Link nella nav mobile */
     .mobile-nav a {
         color: white;
         text-decoration: none;
@@ -120,27 +136,7 @@
         transform: scale(1.1);
     }
 
-    /* Mantieni un piccolo spazio sotto il contenuto per la nav */
-    body::after {
-        content: "";
-        display: block;
-        height: 80px;
-    }
-
-    /* Adattamento per schermi piccoli */
-    @media (max-width: 480px) {
-        .mobile-nav {
-            max-width: 90%;
-            padding: 10px 0;
-            border-radius: 20px 20px 0 0;
-        }
-
-        .mobile-nav a {
-            font-size: 14px;
-        }
-    }
-
-    /* Struttura verticale */
+    /* Layout verticale */
     body {
         display: flex;
         flex-direction: column;
@@ -154,4 +150,61 @@
     footer {
         margin-top: auto;
     }
+}
+
+/* Versione schermi molto piccoli */
+@media (max-width: 480px) {
+    .mobile-nav {
+        max-width: 90%;
+        padding: 10px 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .mobile-nav a {
+        font-size: 14px;
+    }
+
+    header nav form input[type="search"] {
+        width: 140px;
+    }
+}
+
+@media (max-width: 456px) {
+    .hero {
+        padding: 24px 12px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .hero a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    /* NAV MOBILE ancora più compatta */
+    .mobile-nav {
+        max-width: 95%;
+        padding: 8px 0;
+        border-radius: 18px 18px 0 0;
+        
+    }
+
+    .mobile-nav a {
+        font-size: 12px;
+    }
+
+    /* Riduci la larghezza della barra di ricerca */
+    header nav form input[type="search"] {
+        width: 120px;
+        font-size: 13px;
+    }
+
+    nav {gap: 0px;}
 }
