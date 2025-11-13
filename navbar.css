@@ -10,10 +10,14 @@ header {
     z-index: 100;
 }
 
+a h1 {
+    text-decoration: none;
+}
 header h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     color: yellow;
+    text-shadow: 2px 2px 8px rgba(248, 252, 9, 0.8);
     letter-spacing: 2px;
     font-size: 70px;
     margin: 0;
