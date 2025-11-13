@@ -10,6 +10,15 @@
     color: #ccc;
 }
 
+.contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: yellow;
+
+}
 footer {
     background: #000;
     text-align: center;

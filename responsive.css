@@ -1,5 +1,7 @@
 /* --- RESPONSIVE DESIGN --- */
 
+
+/* 1024px */
 @media (max-width: 1024px) {
     .hero {
         align-items: center;
@@ -16,7 +18,7 @@
         font-size: 15px;
     }
 }
-
+/* 768px */
 @media (max-width: 768px) {
     .hero {
         height: 500px;
@@ -41,6 +43,7 @@
     }
 }
 
+/* 480px */
 @media (max-width: 480px) {
     .hero {
         height: auto;
@@ -63,6 +66,19 @@
         padding: 10px 20px;
         font-size: 13px;
     }
+        .mobile-nav {
+            max-width: 90%;
+            padding: 10px 0;
+            border-radius: 20px 20px 0 0;
+        }
+    
+        .mobile-nav a {
+            font-size: 14px;
+        }
+    
+        header nav form input[type="search"] {
+            width: 140px;
+        }
 }
 
 /* NAV MOBILE SEMPRE VISIBILE E CENTRATA */
@@ -85,7 +101,7 @@
     border-radius: 16px 16px 0 0;
 }
 
-/* --- LAYOUT MOBILE: NAV SOTTO IL FOOTER --- */
+/* --- LAYOUT MOBILE: NAV SOTTO IL FOOTER 1195px--- */
 @media (max-width: 1195px) {
     header {
         flex-direction: column;
@@ -151,24 +167,7 @@
         margin-top: auto;
     }
 }
-
-/* Versione schermi molto piccoli */
-@media (max-width: 480px) {
-    .mobile-nav {
-        max-width: 90%;
-        padding: 10px 0;
-        border-radius: 20px 20px 0 0;
-    }
-
-    .mobile-nav a {
-        font-size: 14px;
-    }
-
-    header nav form input[type="search"] {
-        width: 140px;
-    }
-}
-
+/* 456px */
 @media (max-width: 456px) {
     .hero {
         padding: 24px 12px;
